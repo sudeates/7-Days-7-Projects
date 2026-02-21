@@ -43,3 +43,37 @@ The server acts as a gateway to the local `public/` directory:
 │   ├── style.css    # Custom CSS for styling
 │   └── 404.html     # Custom error page
 └── README.md        # Technical Documentation
+
+# 🚀 Day 2: Build Your Own CLI Tool (GitHub Profiler)
+
+Welcome to **Day 2** of my "7 Days - 7 Systems" challenge! Today, I moved away from the browser and into the terminal to build a **Command Line Interface (CLI)** tool that interacts with the GitHub REST API.
+
+
+
+## 📝 Project Overview
+The goal today was to understand how professional terminal tools (like `git`, `docker`, or `npm`) handle user inputs and fetch real-world data. I built a Python-based analyzer that retrieves a user's GitHub stats directly to the console.
+
+## 🛠️ How It Works (The Engineering Logic)
+
+### 1. Argument Parsing (`sys.argv`)
+Unlike a web app where you click buttons, a CLI tool takes input directly from the command line. I used the `sys` module to capture the "arguments" you type after the script name.
+* Example: `python analyzer.py gemini-user` -> The code grabs `gemini-user` and starts the search.
+
+### 2. Consuming REST APIs
+I utilized the `requests` library to communicate with the **GitHub REST API**. 
+* The tool sends a `GET` request to `https://api.github.com/users/{username}`.
+* It handles the **JSON response**, parsing keys like `public_repos`, `followers`, and `location`.
+
+### 3. Status Code Management
+A good tool must handle errors gracefully:
+* **200 OK:** Data is found and printed with icons.
+* **404 Not Found:** The tool alerts the user that the profile doesn't exist instead of crashing.
+
+
+
+## 🏗️ Project Structure
+```text
+.
+├── analyzer.py      # The main CLI application logic
+├── requirements.txt # List of dependencies (requests)
+└── README.md        # Documentation
