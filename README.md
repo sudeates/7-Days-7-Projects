@@ -69,11 +69,19 @@ A good tool must handle errors gracefully:
 * **200 OK:** Data is found and printed with icons.
 * **404 Not Found:** The tool alerts the user that the profile doesn't exist instead of crashing.
 
+# 🎮 Day 3: Build Your Own 3D Wireframe Renderer
 
+On **Day 3**, I explored the intersection of Linear Algebra and Computer Graphics. I built a real-time 3D renderer from scratch using Python and `pygame`.
 
-## 🏗️ Project Structure
-```text
-.
-├── analyzer.py      # The main CLI application logic
-├── requirements.txt # List of dependencies (requests)
-└── README.md        # Documentation
+## 🧠 The Math Behind the Magic
+* **3D Projection:** Converting 3D coordinates $(x, y, z)$ into 2D screen coordinates $(x', y')$ using perspective projection formulas.
+* **Rotation Matrices:** Implementing Trigonometric functions ($\sin$ and $\cos$) to rotate vertices in 3D space.
+* **Rendering Pipeline:** Managing the frame loop: Clear -> Transform -> Draw -> Update.
+
+## 🛠️ Tech Stack
+* **Language:** Python
+* **Library:** Pygame (for pixel drawing)
+* **Concepts:** Linear Algebra, Trigonometry, Frame Buffers.
+
+---
+*Next up: **Day 4 - Build Your Own Version Control System (VCS)**!*
